@@ -87,7 +87,3 @@ for(i in 1:1440) {
 rgl::rgl.close()
 system("ffmpeg -framerate 60 -i guwahati_Mpz%d.png -vcodec libx264 -an Ghy_Mapzen_2.1.mp4 ")
 ```
-The markdown is provided as under:
-![final 2D plot with overlay](https://github.com/Hwoabam/Guwahati-3D-map-Mapzen-DEM/blob/master/Ghy_Mapzen.rmd)
-
-
