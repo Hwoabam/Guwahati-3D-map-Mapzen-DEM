@@ -1,5 +1,6 @@
 # Guwahati-3D-map-Mapzen-DEM
 A tutorial for 3D map generation in R using mapzen_dem()
+![Demo1](https://github.com/Hwoabam/Guwahati-3D-map-Mapzen-DEM/blob/master/Media/Animation/Mapzen.gif)
 
 The packages required are:
 ```{r}
@@ -51,6 +52,7 @@ elmat %>%
   sphere_shade(texture = "bw") %>%
   plot_map()
 ```
+![Default texture](https://github.com/Hwoabam/Guwahati-3D-map-Mapzen-DEM/blob/master/Media/Plots/BW.png)
 
 The Stamen basemap is overlain on the elevation matrix defined previously. The resulting plot :
 ```{r fig3, fig.height = 15, fig.width = 10, align= "center"}
@@ -61,6 +63,7 @@ elmat %>%
     add_shadow(ray_shade(elmat, zscale=50,maxsearch = 500)) %>%
      plot_map()
 ```
+![final 2D plot with overlay](https://github.com/Hwoabam/Guwahati-3D-map-Mapzen-DEM/blob/master/Media/Plots/Stamen.png)
 Using the PLot generated previoulsy and the elevation matrix, providing a zscale=7.5 and viewpoint parameters as desired. The compass is rendered to the west of the plot.
 ```{r fig5, fig.height = 15, fig.width = 10, align= "center"}
 #render in 3d
@@ -70,8 +73,9 @@ elmat %>%
     plot_3d(elmat, zscale = 7.5, fov = 0, theta = -15, zoom = 0.58, phi = 38, windowsize = c(1000, 800))
 render_compass(position = "W" )
 render_snapshot(title_text = "Guwahati Topography | Mapzen DEM",title_bar_color = "#F2E1D0", title_color = "black", title_bar_alpha = 1)
-
 ```
+![3D plot](https://github.com/Hwoabam/Guwahati-3D-map-Mapzen-DEM/blob/master/Media/Snapshots/snapMp.png)
+
 A 24 second video is generated of the animation of the rotation of the plot using ffmpeg function at framerate of 60fps. 
 ```{r eval=FALSE, include=FALSE}
 angles= seq(0,360,length.out = 1441)[-1]
