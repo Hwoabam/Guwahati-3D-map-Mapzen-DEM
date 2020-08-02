@@ -9,7 +9,7 @@ library(geoviz)
 library(raster)
 library(rgdal)
 ```
-Then the coordinates of the centre of the area of interest are assigned as the centre of the plygon to be used for data extraction alongwith the area in square km and the resolution as max number of tiles. Then mapzen_dem function is used for data exportation.
+Then the coordinates of the centre of the area of interest are assigned as the centre of the polygon to be used for data extraction alongwith the area in square km and the resolution as max number of tiles. Then mapzen_dem function is used for data exportation.
 ```{r}
 ##Lat, long of the centre of the area of interest
 lat <- 26.151317
